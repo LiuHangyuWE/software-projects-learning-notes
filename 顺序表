@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #define MAXSIZE 100
 typedef int ElemType;
+//存储密度高低和内存对齐量有关，在结构体中，不同数据类型内存对齐。顺序表的存储密度为1，线性表则<1
 typedef struct {
 	ElemType *data;
 	int length;
