@@ -1,0 +1,20 @@
+typedef int ElemType;
+typedef struct node {
+    ElemType data;
+    struct node *prev, *next;
+}Node;
+Node* initList() {
+    Node *head = (Node*)malloc(sizeof(Node));
+    head->data = 0;
+    head->next = NULL;
+    head->prev = NULL;
+    return head;
+}
+void insertHead(Node* L， ElemType e) {
+    Node *p = (Node*)malloc(sizeof(Node));
+    p->data = e;
+    p->prev = L;
+    p->next = L->next;
+    if(L->next != NULL)    L->next->prev = p;
+    L->next = p;
+}
