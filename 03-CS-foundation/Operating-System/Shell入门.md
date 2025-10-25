@@ -27,8 +27,8 @@
   ls [选项] [目录路径]
   ```
 - **常用选项**：
-  - `-l`：以长格式列出文件和目录详情
-  - `-a`：显示包括隐藏文件在内的所有文件
+  - `-l`：以长格式列出文件和目录详情，常组合使用`-la`
+  - `-a`：显示包括隐藏文件在内的所有文件。例如，以 `.` 开头的文件都会被隐藏。使用该命令或非缩写形式`--all`可以列出所有文件，包括当前目录和上一级目录
   - `-h`：以人类可读的格式显示文件大小（与`-l`一起使用）
 - **示例**：
   ```bash
@@ -84,7 +84,7 @@
   ```
 
 ### rsync
-- **功能**：一个功能强大的远程同步和备份工具。它通过“增量传输算法”来智能地复制文件和目录。它会比较源和目标的文件差异，只传输被修改过的部分，因此在重复执行时速度极快，尤其适合网络传输和备份。
+- **功能**：一个功能强大的远程同步和备份工具。它通过“增量传输算法”来智能地复制文件和目录。它会比较源和目标的文件差异，只传输被修改过的部分，因此在重复执行时速度极快，尤其适合**网络传输和备份**。
     - **语法**：
     ```bash
     # 本地同步
@@ -104,20 +104,20 @@
   * `--delete`: 删除目标目录中源目录不存在的文件，实现真正的“同步”。
   * `-n` 或 `--dry-run`: 模拟运行。显示会执行哪些操作，但**不实际执行**，用于测试。
 - **示例**：
-```bash
-# 本地同步，-avh是常用组合
-# 注意：source/ 表示同步目录里的内容，而 source 表示同步目录本身
-rsync -avh source/ destination
+    ```bash
+    # 本地同步，-avh是常用组合
+    # 注意：source/ 表示同步目录里的内容，而 source 表示同步目录本身
+    rsync -avh source/ destination
 
-# 推送本地项目到远程服务器
-rsync -avh ./my-project/ user@123.45.67.89:/home/user/www/
+    # 推送本地项目到远程服务器
+    rsync -avh ./my-project/ user@123.45.67.89:/home/user/www/
 
-# 同步备份，并删除目标目录多余的文件
-rsync -avh --delete source/ user@123.45.67.89:/home/user/backup/
+    # 同步备份，并删除目标目录多余的文件
+    rsync -avh --delete source/ user@123.45.67.89:/home/user/backup/
 
-# 测试一下同步操作会发生什么，但不实际执行
-rsync -avhn --delete source/ destination
-```
+    # 测试一下同步操作会发生什么，但不实际执行
+    rsync -avhn --delete source/ destination
+    ```
 ### mv
 - **功能**：移动或重命名文件或目录
 - **语法**：
@@ -156,7 +156,8 @@ rsync -avhn --delete source/ destination
 - **示例**：
   ```bash
   cat file.txt         # 在终端中显示file.txt的内容
-  cat file1.txt file2.txt > combined.txt  # 将file1.txt和file2.txt的内容合并到combined.txt
+  cat file1.txt file2.txt > combined.txt  # 将file1.txt和file2.txt的内容合并重定向到combined.txt
+  cat > .gitkeep  # 将左边的内容（默认等会儿键盘要读取的）重定向到右边的文件。注意，此命令后将从键盘读取直到 EOF 信号，Mac 和 Linux 上是 control + D。
   ```
 
 ### less
@@ -482,7 +483,7 @@ rsync -avhn --delete source/ destination
 
 ## Mac专属命令
 
-- 我是 Mac 用户，平时在 Mac 上的 zsh 上常用命令也列在此。
+- 我是 Mac 用户，平时在 Mac 上的 zsh 上常用命令也列在此。g
 
 ### open
 - **功能**：在Mac上打开文件、目录或应用程序
