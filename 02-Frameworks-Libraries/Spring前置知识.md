@@ -40,8 +40,7 @@
             <groupId>com.mysql</groupId>
             <artifactId>mysql-connector-j</artifactId>
             <version>8.4.0</version>
-            <scope>runtime</scope>
-        </dependency>
+            <scope>runtime</scope> </dependency>
     </dependencies>
 
   </project>
@@ -51,10 +50,10 @@
    * `artifactId`是项目ID，使用项目、模块的名称，我的代码中写的项目是学习JDBC。
    * `version`是版本号，分为 3 级。第一级是主版本号。当做了不兼容的 API 修改时才增加这个版本号。比如，一个函数被删除了，或者参数变了，导致旧的代码无法直接在新版本上运行。向下兼容地添加了新功能时，增加第二个版本号。做了向下兼容的问题修正时，增加第三个版本号，例如一个不增加新功能的小修 bug。
    * `SNAPSHOT`是快照的意思，表明这个版本是一个不稳定的、正在开发中的版本。此版本下，每当把最新的代码发布到 Maven 仓库时，Maven 会为这个快照版本生成一个带时间戳的唯一版本（例如 1.0-20251025.160000-1）。当同事构建他的项目B时，Maven 会自动检查仓库里有没有比他本地更新的 1.0-SNAPSHOT 版本。如果有，就会自动下载最新的快照，无需他手动修改 pom.xml。觉得这个项目的功能已经发完成、测试通过、可以稳定使用时，执行 release 操作，去掉 -SNAPSHOT 后缀，正式发布 1.0 版本。然后，下一个开发周期将从 1.1-SNAPSHOT 或 2.0-SNAPSHOT 开始。
-  1. 知道 \<dependencies\> 和 \<dependency\> 标签的作用。
+  2. 知道 \<dependencies\> 和 \<dependency\> 标签的作用。
    * `<dependencies>`我要开始列举我需要的所有 JAR 包了。
    * `<dependency>`我需要一个什么样的 JAR 包。
-  2. 学会从 [Maven中央仓库](https://mvnrepository.com/) 查找需要的依赖，并把它粘贴到 pom.xml 里。粘的位置正是上一点写的`<dependency>`里面。例如我需要连接 JDBC 和 MySQL 数据库，就在上面的代码写了相关的依赖。
+  3. 学会从 [Maven中央仓库](https://mvnrepository.com/) 查找需要的依赖，并把它粘贴到 pom.xml 里。粘的位置正是上一点写的`<dependency>`里面。例如我需要连接 JDBC 和 MySQL 数据库，就在上面的代码写了相关的依赖。
 
 #### **二：Web 前置知识**
 
@@ -145,11 +144,15 @@
 
   2. 计算机网络的知识，了解 HTTP (浏览器和服务器之间的通信规则) 的基本概念
   * 请求-响应循环
-  > 1.客户端与服务器建立连接。
-    2.客户端发送一条 HTTP 请求 (Request) 报文。
-    3.服务器处理该请求。
-    4.服务器返回一条 HTTP 响应 (Response) 报文。
-    5.连接通常会被关闭（现代 HTTP 版本为了效率可以复用连接）。
+  <blockquote>
+   <ol style="list-style-type: decimal;">
+     <li>客户端与服务器建立连接。</li>
+     <li>客户端发送一条 HTTP 请求 (Request) 报文。</li>
+     <li>服务器处理该请求。</li>
+     <li>服务器返回一条 HTTP 响应 (Response) 报文</li>
+     <li>连接通常会被关闭（现代 HTTP 版本为了效率可以复用连接）。</li>
+   </ol>
+  </blockquote>
   
   * 了解 HTTP 请求报文的一些方法，请求报文和响应报文的结构。
   * 识别常见的 HTTP 状态码。
