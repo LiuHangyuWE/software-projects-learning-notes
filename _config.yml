@@ -1,9 +1,9 @@
 # _config.yml
 
-# 网站主题，下面的设置是一个简洁、非常适合笔记的主题
+# 网站主题
 theme: jekyll-theme-minimal
 
-# 网站标题和描述 (会显示在浏览器标签页上)
+# 网站标题和描述
 title: Hello, Computer Science World!
 description: 记录一个计算机本科生的学习与探索之路。
 
@@ -20,11 +20,5 @@ include:
 defaults:
   - scope:
       path: "" # 空字符串表示匹配项目中的所有文件
-      type: "posts" # posts, pages, drafts, or any collection
-    values:
-      layout: "default"
-  - scope:
-      path: ""
-      type: "pages"
     values:
       layout: "default"
