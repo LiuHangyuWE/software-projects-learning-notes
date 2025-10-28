@@ -7,6 +7,12 @@ theme: jekyll-theme-minimal
 title: Hello, Computer Science World!
 description: 记录一个计算机本科生的学习与探索之路。
 
+# 设置完整的 URL
+URL: "https:/liuhangyuwe.github.io"
+
+# 基础路径设置
+baseurl: "/software-projects-learning-notes"
+
 # 确保 Jekyll 正确处理仓库里的所有文件和文件夹
 include:
   - "01-Project-Management"
