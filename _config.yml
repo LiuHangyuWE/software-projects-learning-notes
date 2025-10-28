@@ -15,3 +15,16 @@ include:
   - "04-OS-Implementation"
   - "assets"
   - "LICENSE"
+
+# 为所有 Markdown 文件设置默认值
+defaults:
+  - scope:
+      path: "" # 空字符串表示匹配项目中的所有文件
+      type: "posts" # posts, pages, drafts, or any collection
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
