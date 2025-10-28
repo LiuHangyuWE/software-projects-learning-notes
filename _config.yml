@@ -1,13 +1,13 @@
 # _config.yml
 
-# 网站主题 (这是一个简洁、非常适合笔记的主题)
+# 网站主题，下面的设置是一个简洁、非常适合笔记的主题
 theme: jekyll-theme-minimal
 
 # 网站标题和描述 (会显示在浏览器标签页上)
 title: Hello, Computer Science World!
 description: 记录一个计算机本科生的学习与探索之路。
 
-# 这行代码很重要，它能确保 Jekyll 正确处理你仓库里的所有文件和文件夹
+# 确保 Jekyll 正确处理仓库里的所有文件和文件夹
 include:
   - "01-Project-Management"
   - "02-Frameworks-Libraries"
