@@ -14,6 +14,9 @@
 </p>
 
 [![Website](https://img.shields.io/badge/Website-Open-blue?style=for-the-badge)](https://LiuHangyuWE.github.io/software-projects-learning-notes/)
+
+> English Readers could click the following button to get the English version README.
+
 [![English](https://img.shields.io/badge/README-English-blue?style=for-the-badge)](./README.en.md)
 
 ##  写在前面
