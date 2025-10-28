@@ -9,13 +9,16 @@
   <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
 </p>
 
-<p align="right">
+<p>
   <img src="https://img.shields.io/github/last-commit/LiuHangyuWE/software-projects-learning-notes" alt="Last Commit">
 </p>
 
+[![Website](https://img.shields.io/badge/Website-Open-blue?style=for-the-badge)](https://LiuHangyuWE.github.io/software-projects-learning-notes/)
+[![English](https://img.shields.io/badge/README-English-blue?style=for-the-badge)](./README.en.md)
+
 ##  写在前面
 
-你好，这是一个有关我学习路径的仓库！
+你好!这是一个有关我学习路径的仓库。
 
 我是一名普通的计算机本科生。我知道很多人不是不想努力，而是不清楚怎样努力，甚至大脑一片混沌，有人问：“计算机，是计算器吗？”想要开始，又发现，不知道要学什么。
 
@@ -64,7 +67,7 @@
 * **操作系统 (Operating System)**
 * **计算机组成原理 (Computer Organization)** 
 * **数据结构与算法 (Data Structures & Algorithms)** (使用 C/C++/Java 实现)
-* **数据库 (Database)**: 从 SQL 简单题目到深入数据库设计的思考。
+* **数据库 (Database)**: 从 SQL 简单题目深入数据库设计的思考。
 
 ---
 
@@ -75,8 +78,8 @@
 
 ---
 
-##  关于我 (About Me)
+##  关于我
 
 *  **我是谁?** 2024 年入学成都信息工程大学，计算机科学（区块链工程），刘航宇，学号是 2024131035
-*  **目标**: 掌握扎实的应用层基础先成为一名：后端开发工程师；进一步探索底层后有能力当：架构师
+*  **目标**: 掌握扎实的应用层基础先成为一名：**后端开发工程师**；进一步探索底层后有能力当：**架构师**
 *  **如果你觉得这个项目对你有帮助，欢迎点一个 Star ⭐！也欢迎在 Issues 中提出你的建议！**
