@@ -1,3 +1,6 @@
+---
+---
+
 # Hello, Computer Science World!
 
 <p align="center">
@@ -13,6 +16,7 @@
   <img src="https://img.shields.io/github/last-commit/LiuHangyuWE/software-projects-learning-notes" alt="Last Commit">
 </p>
 
+[![Website](https://img.shields.io/badge/Website-Open-blue?style=for-the-badge)](https://LiuHangyuWE.github.io/software-projects-learning-notes/)
 [![中文](https://img.shields.io/badge/文档-中文-brightgreen?style=for-the-badge)](./README.md)
 
 > **Note for English readers:** Most file/folder descriptions, notes, and commit messages are written in **Chinese**. You may want to use a translator for some content.

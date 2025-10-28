@@ -1,3 +1,6 @@
+---
+---
+
 #  Hello, Computer Science World!
 
 <p align="center">
@@ -12,6 +15,8 @@
 <p>
   <img src="https://img.shields.io/github/last-commit/LiuHangyuWE/software-projects-learning-notes" alt="Last Commit">
 </p>
+
+[![Website](https://img.shields.io/badge/Website-Open-blue?style=for-the-badge)](https://LiuHangyuWE.github.io/software-projects-learning-notes/)
 
 > English Readers could click the following button to get the English version README.
 
