@@ -1,6 +1,3 @@
----
----
-
 # Hello, Computer Science World!
 
 <p align="center">
