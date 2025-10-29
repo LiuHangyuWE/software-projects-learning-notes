@@ -33,7 +33,15 @@
 
 ##  仓库导航
 
-本仓库目前主要分为四大模块，涵盖了从项目管理、技术框架到计算机核心基础的完整学习链路。
+本仓库目前主要分为四大模块，涵盖了从项目管理、技术框架到计算机核心基础的学习链路。
+
+### 版本控制
+
+下面的徽章是最近一次的 release 版本～
+
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/LiuHangyuWE/software-projects-learning-notes)](https://github.com/LiuHangyuWE/software-projects-learning-notes/releases)
+
+大家也可以在 **[Releases 页面](https://github.com/LiuHangyuWE/software-projects-learning-notes/releases)** 查看、下载所有历史版本。
 
 ---
 
