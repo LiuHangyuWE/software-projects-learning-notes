@@ -35,6 +35,14 @@ I want this repo to be a grounded record of growth. With clear planning, steady 
 
 This repository currently has four main modules, covering the path from project management and frameworks to CS fundamentals.
 
+### Version Control
+
+The following badge is the most recent release version~
+
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/LiuHangyuWE/software-projects-learning-notes)](https://github.com/LiuHangyuWE/software-projects-learning-notes/releases)
+
+You could go **[Releases Page](https://github.com/LiuHangyuWE/software-projects-learning-notes/releases)** to see & download all history versions.
+
 ---
 
 ### [01-Project-Management](./01-Project-Management)
