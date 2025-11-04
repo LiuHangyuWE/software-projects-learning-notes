@@ -4,9 +4,14 @@
 
 *  在 JavaSE 手动 import 类，或者手动添加 JAR 包。在真实项目中，一个项目可能依赖几十上百个 JAR 包。Maven 是一个专业的项目管家，它能**自动下载和管理所有依赖的 JAR 包**。 
   
-    > JAR 包是 Java 世界里分发和使用代码的基本单位。它是一个包含了预编译好的 Java 类和其他资源的压缩文件，通过组合各种现成的功能模块（JAR 包）来高效地构建自己的应用程序。
+    > JAR 包是 Java 世界里分发和使用代码的基本单位。它是一个包含了预编译好的 Java 类和其他资源的压缩文件(.zip)，通过组合各种现成的功能模块（JAR 包）来高效地构建自己的应用程序。
+    >
+    > 思想就是打包。把别人打包的东西（别人的 jar 包）称为依赖，从外部拉取 jar 包叫做*声明依赖*。
+    >
+    > 自己的项目打包成 jar 包，叫做*打包项目*。
 
-* 所有的 Spring Boot 项目都基于 Maven (或 Gradle) 来构建。这是创建项目的起点。  
+* 所有的 Spring Boot 项目都基于 Maven (或 Gradle) 来构建。这是创建项目的起点。下面介绍如何从 maven 注入依赖。
+* maven 是一个中央仓库，里面有各种各样的 jar 包，是 java 生态的官方中央仓库，收录的内容由全世界的开源组织和个人开发者共享和贡献，受到严格审核与管理规则。里面的内容对全世界的开发者开源，所有人都能导入。maven 之于 Java，类似 App Store 之于 Apple。
 * **掌握如下知识**  
   1. 理解 pom.xml 文件的功能。
    ```xml
@@ -54,10 +59,24 @@
    * `<dependencies>`我要开始列举我需要的所有 JAR 包了。
    * `<dependency>`我需要一个什么样的 JAR 包。
   3. 学会从 [Maven中央仓库](https://mvnrepository.com/) 查找需要的依赖，并把它粘贴到 pom.xml 里。粘的位置正是上一点写的`<dependency>`里面。例如我需要连接 JDBC 和 MySQL 数据库，就在上面的代码写了相关的依赖。
+  4. 掌握如何将自己的 Spring Boot 项目打包成 jar。
+   * 使用 Spring Boot 构建项目时，在 pom.xml 里面加上一个插件，这个插件创建一个可执行 JAR（也叫 Fat JAR）。它不仅包含了自己的 .class 文件，还把所有依赖的库 JAR 包也一起打包了进去。
+   * 只需要 `java -jar my-app.jar` 就能运行整个 Spring Boot 应用，因为它已经是一个自包含的完整包了。
+
+  ```xml
+  <build>
+    <plugins>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+        </plugin>
+    </plugins>
+  </build>
+  ```
 
 #### **二：Web 前置知识**
 
-*  Spring Boot 主要用来开发 Web 应用（后端API）。所有 Web 应用都建立在 HTTP 协议之上。而 Servlet 是 Java 官方提供的、用于处理 HTTP 请求和响应的一套最最基础的 API 规范。  
+*  Spring Boot 主要用来开发 Web 应用（后端API）。所有 Web 应用都建立在 HTTP 协议之上。而 Servlet 是 Java 官方提供的、用于处理 HTTP 请求和响应的一套最最基础的 API 规范。 Servlet 容器中，最出名的是 Tomcat。
 *  Spring Boot 中的所有网络相关注解，**其最底层就是 Servlet**。Servlet（Server Applet，服务器小程序）是运行在 Web 服务器内部的 Java 程序。
      * 以前，Web 服务器只能处理静态资源（HTML 文件、图片）。为了让服务器能处理动态的、需要 Java 逻辑的请求（比如从数据库查数据、进行计算），Sun 公司定义了一套标准的 Java API 接口，这就是 Servlet API。Servlet 容器来完成底层的网络通信、HTTP 协议解析等复杂工作。
 * Java对象存在于JVM的内存中，是一种结构化的数据实体； **JSON** 是一个纯文本的、有特定格式的字符串，用于在不同系统（比如前端浏览器和后端服务器）之间传输数据。映射遵循一套固定的规则，将Java对象的属性（Fields）和值（Values）映射成JSON对象的键（Keys）和值（Values）。
