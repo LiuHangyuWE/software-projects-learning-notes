@@ -1,7 +1,8 @@
 #  Hello, Computer Science World!
 
 <p align="center">
-  <img src="https://img.shields.io/badge/x86%20Assembly-007AC7?style=for-the-badge&logo=intel&logoColor=white" alt="x86 Assembly">
+  
+  <img src="https://img.shields.io/badge/RISC--V%20Assembly-003262?style=for-the-badge&logo=riscv&logoColor=white" alt="RISC-V">
   <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white" alt="C">
   <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" alt="C++">
   <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java">
@@ -84,7 +85,7 @@
 ### [ 04-OS-Implementation](./04-OS-Implementation) (规划中)
 **动手实现操作系统**
 
-理论学习最终要回归实践。这个模块计划记录我动手实现一个小型操作系统的过程，将理论知识转化为实际的代码，真正“知行合一”。我会从 x86_64 汇编语言和 C 语言开始动手！
+理论学习最终要回归实践。这个模块计划记录我动手实现一个小型操作系统的过程，将理论知识转化为实际的代码，真正“知行合一”。我会从 RISC-V 汇编语言和 C 语言开始动手！
 
 ---
 
